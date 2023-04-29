@@ -131,7 +131,6 @@
             </div>
             <div class="configurator__content">
               <div class="configurator__list">
-
                 <div class="configurator__item configurator__item_current">
                   <span class="configurator__number">01</span>
                   <h2 class="configurator__title">Выберите марку и модель автомобиля</h2>
@@ -411,6 +410,121 @@
                   <span class="configurator__desc">*Уважаемые покупатели, оттенок цвета на картинке может не существенно
                     отличаться от
                     готовой продукции</span>
+                </div>
+
+                <div class="configurator__item">
+                  <span class="configurator__number">05</span>
+                  <div class="configurator__row">
+                    <div class="configurator__col configurator__col_left">
+                      <h2 class="configurator__title">Выберите комплектацию</h2>
+                      <div class="complect-tabs">
+                        <ul class="complect-list">
+                          <li>
+                            <a href="#complect1"></a>
+                            <input type="radio" id="comp1" name="complect">
+                            <label for="comp1">Комплект</label>
+                          </li>
+                          <li>
+                            <a href="#complect2"></a>
+                            <input type="radio" id="comp2" name="complect" checked>
+                            <label for="comp2">По отдельности</label>
+                          </li>
+                        </ul>
+                        <div class="complect-body" id="complect1">
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk" name="chk-1">
+                            <label for="chk">Коврик водительский с ЗD лапой и бортами</label>
+                          </div>
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk0" name="chk-1">
+                            <label for="chk0">Передние коврики с ЗD лапой и бортами</label>
+                          </div>
+                        </div>
+                        <div class="complect-body" id="complect2">
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk1" name="chk-2">
+                            <label for="chk1">Коврик водительский с ЗD лапой и бортами</label>
+                          </div>
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk2" name="chk-2">
+                            <label for="chk2">Передние коврики с ЗD лапой и бортами</label>
+                          </div>
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk3" name="chk-2">
+                            <label for="chk3">Комплект задних ковриков с бортами</label>
+                          </div>
+                          <div class="checkBlock">
+                            <input type="checkbox" id="chk4" name="chk-2">
+                            <label for="chk4">Коврики в багажник</label>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <div class="configurator__col configurator__col_complects">
+                      <div class="auto-picture">
+                        <img src="img/auto.png" alt="">
+                      </div>
+                      <div class="auto-picture__link">
+                        <a href="#">Схема расположения ковриков</a>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="configurator__item">
+                  <span class="configurator__number">06</span>
+                  <h2 class="configurator__title">Выберите аксессуары</h2>
+                  <div class="accessories">
+                    <div class="accessories__col">
+                      <img src="img/pic-accessories.png" alt="accessories">
+                      <span class="accessories__text">Значок BMW</span>
+                      <div class="counter">
+                        <div class="counter__minus">-</div>
+                        <duv class="counter__text">1</duv>
+                        <div class="counter__plus">+</div>
+                      </div>
+                      <span class="accessories__price">200р</span>
+                      <button class="btn btnSimple">+</button>
+                    </div>
+                    <div class="accessories__col">
+                      <img src="img/pic-accessories2.png" alt="accessories">
+                      <div class="input-list">
+                        <div class="input-item">
+                          <select>
+                            <option value="">Подпяточник полимерный</option>
+                            <option value="">Подпяточник алюминиевый</option>
+                          </select>
+                        </div>
+                      </div>
+                      <span class="accessories__price">590р</span>
+                      <button class="btn btnSimple">+</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="configurator__controls">
+                <div class="configurator__controls__left">
+                  <span class="configurator__controls__title">Остались вопросы?</span>
+                  <span class="configurator__controls__text">Свяжитесь с нами</span>
+                  <button class="btn-whatsapp"> <span class="icon-whatsapp"></span> Написать Whats App</button>
+                </div>
+                <div class="configurator__controls__right">
+                  <div class="price-block">
+                    <div class="price-block__line">
+                      <span class="price-block__title">Стоимость:</span>
+                      <span class="price-block__price">3 650 ₽ </span>
+                    </div>
+                    <div class="price-block__line">
+                      <span class="price-block__delivery"> <span class="icon-delivery"></span> Доставка в Электросталь
+                        от 257 ₽:</span>
+                      <a href="#" class="price-block__link">Подробнее</a>
+                    </div>
+                    <div class="price-block__line">
+                      <button type="submit" class="btn btnSimple">Купить</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

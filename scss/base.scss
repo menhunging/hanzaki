@@ -284,6 +284,56 @@ input {
   }
 }
 
+.checkBlock {
+  display: flex;
+  align-items: center;
+  min-height: 36px;
+
+  input {
+    display: none;
+
+    &:checked {
+      & + label {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  label {
+    cursor: pointer;
+    padding-left: 38px;
+    position: relative;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorDark;
+    display: block;
+
+    @include before {
+      left: 0;
+      top: 50%;
+      width: 25px;
+      height: 25px;
+      margin-top: -10px;
+      border: solid 1px $colorSite1;
+      @include border-radius(50%);
+    }
+
+    @include after {
+      left: 5px;
+      top: 50%;
+      width: 15px;
+      height: 15px;
+      margin-top: -5px;
+      background-color: $colorSite1;
+      @include border-radius(50%);
+      opacity: 0;
+    }
+  }
+}
+
 ///////////////////////////
 
 .textSimple {
@@ -412,76 +462,6 @@ input {
 .swiper-button-next {
   @extend %swiper-button;
   right: -99px;
-}
-
-.checkBlock {
-  position: relative;
-  input {
-    display: none;
-    &:checked {
-      & + label {
-        &::after {
-          opacity: 1;
-        }
-      }
-    }
-  }
-  label {
-    display: inline-block;
-    cursor: pointer;
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    position: relative;
-    height: 37px;
-    padding-left: 30px;
-    &::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 6px;
-      width: 19px;
-      height: 19px;
-      background-color: $colorWhite;
-      border: solid 2px #eeeeee;
-      @include border-radius(50%);
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      left: 5px;
-      top: 10px;
-      width: 10px;
-      height: 10px;
-      background-position: center;
-      background-repeat: no-repeat;
-      opacity: 0;
-      @include transition(all 0.3s);
-      background-color: $colorDark;
-      @include border-radius(50%);
-    }
-  }
-  .link {
-    display: inline;
-    text-decoration: underline;
-    @include transition(color 0.3s);
-    &:hover {
-      color: $colorDark;
-    }
-  }
-
-  &.error {
-    label {
-      &::before {
-        border-color: #ff0000;
-      }
-    }
-  }
-
-  & + .checkBlock {
-    margin-top: 2px;
-  }
 }
 
 // modals base

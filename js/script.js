@@ -17,6 +17,42 @@ $(document).ready(function () {
     }
   }
 
+  if ($(".complect-tabs").length) {
+    $(".complect-tabs").tabslet({
+      mouseevent: "click",
+      animation: true,
+      active: 2,
+    });
+
+    $(".complect-tabs").on("_before", function (e) {
+      $(e.target).find("input").prop("checked", true);
+    });
+  }
+
+  if ($(".counter").length) {
+    let minus = $(".counter__minus");
+    let plus = $(".counter__plus");
+    let text = $(".counter__text");
+
+    minus.on("click", () => {
+      let count = Number(text.text());
+      text.text(count == 0 ? 0 : count - 1);
+    });
+
+    plus.on("click", () => {
+      let count = Number(text.text());
+      text.text(count + 1);
+    });
+  }
+
+  if ($(".tabs").length > 0) {
+    $(".tabs").tabslet({
+      mouseevent: "click",
+      attribute: "href",
+      animation: true,
+    });
+  }
+
   if ($(".menuBurger").length) {
     $(".menuBurger").on("click", function () {
       $(".menuBurger").toggleClass("open");
