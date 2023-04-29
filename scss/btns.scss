@@ -1,0 +1,89 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  @include border-radius(5px);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 51px;
+  padding: 5px;
+  height: 59px;
+  letter-spacing: 0.1em;
+  overflow: hidden;
+  @include transition(all 0.3s);
+
+  &.btnSimple {
+    background-color: $colorSite1;
+    color: $colorWhite;
+
+    @include beforeIcMoon {
+      content: "\e001";
+      font-size: 8px;
+      right: 12px;
+      top: 1px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:hover {
+      background-color: $colorBlack;
+    }
+  }
+}
+
+%btns__call {
+  position: relative;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  color: $colorWhite;
+  @include border-radius(5px);
+  height: 50px;
+  min-width: 223px;
+  padding-left: 70px;
+  padding-right: 20px;
+  @include transition(all 0.3s);
+
+  [class*="icon-"] {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    font-size: 30px;
+    color: $colorWhite;
+    @include border-radius(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition(all 0.3s);
+  }
+
+  &:hover {
+    padding-left: 20px;
+    padding-right: 70px;
+
+    [class*="icon-"] {
+      left: calc(100% - 50px);
+    }
+  }
+}
+
+.btn-whatsapp {
+  @extend %btns__call;
+  background-color: rgba(30, 184, 97, 0.6);
+
+  [class*="icon-"] {
+    background-color: #1eb862;
+  }
+}
+
+.btn-phone {
+  @extend %btns__call;
+  background-color: rgba(21, 178, 181, 0.6);
+
+  [class*="icon-"] {
+    background-color: #15b2b5;
+  }
+}
