@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?v9cohx');
-  src:  url('fonts/icomoon.eot?v9cohx#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?v9cohx') format('truetype'),
-    url('fonts/icomoon.woff?v9cohx') format('woff'),
-    url('fonts/icomoon.svg?v9cohx#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?vyisvh');
+  src:  url('fonts/icomoon.eot?vyisvh#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vyisvh') format('truetype'),
+    url('fonts/icomoon.woff?vyisvh') format('woff'),
+    url('fonts/icomoon.svg?vyisvh#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,27 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-adv1:before {
+  content: "\e909";
+}
+.icon-adv2:before {
+  content: "\e90a";
+}
+.icon-adv3:before {
+  content: "\e90b";
+}
+.icon-adv4:before {
+  content: "\e90c";
+}
+.icon-adv5:before {
+  content: "\e90d";
+}
+.icon-adv6:before {
+  content: "\e90e";
+}
+.icon-arrow-swiper:before {
+  content: "\e908";
+}
 .icon-delivery:before {
   content: "\e907";
 }

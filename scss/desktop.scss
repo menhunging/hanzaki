@@ -699,3 +699,356 @@
     }
   }
 }
+
+.rugs-info {
+  background-color: #f8f8f8;
+  padding: 130px 0 0;
+}
+
+.rugs-slider {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+
+  &__title {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+    letter-spacing: 0.04em;
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 45px;
+    display: block;
+    margin-top: -10px;
+  }
+
+  &__price {
+    margin-top: 30px;
+
+    .title {
+      font-weight: 300;
+      font-size: 25px;
+      line-height: 32px;
+      display: block;
+
+      & + .price {
+        margin-top: -6px;
+      }
+    }
+
+    .price {
+      font-weight: 500;
+      font-size: 35px;
+      line-height: 45px;
+      display: block;
+    }
+  }
+
+  &__content {
+    background-color: $colorWhite;
+    @include box-shadow(0px 4px 35px rgba(0, 0, 0, 0.15));
+    @include border-radius(10px);
+    padding: 71px 101px 22px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 38px;
+  }
+
+  &__leftSide {
+    position: relative;
+    max-width: 370px;
+    width: 100%;
+  }
+
+  &__righSide {
+    position: relative;
+    z-index: 3;
+    min-height: 405px;
+    width: 100%;
+    max-width: 915px;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      top: -70px;
+      right: -100px;
+      z-index: -1;
+      pointer-events: none;
+      background-image: url("../img/logo-big-company.png");
+      background-position: right top;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn {
+    margin-top: 23px;
+    min-width: 275px;
+  }
+
+  .info {
+    position: absolute;
+    right: -12px;
+    top: 16px;
+    cursor: pointer;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+    @include border-radius(50%);
+    @include transition(all 0.3s);
+    background-color: #e0e0e0;
+    width: 34px;
+    height: 34px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      background-color: $colorSite1;
+      color: $colorWhite;
+    }
+  }
+
+  .swiper {
+    position: relative;
+    margin-top: -197px;
+
+    @include before {
+      background-image: url(../img/circles.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      height: 112px;
+      bottom: 35px;
+      width: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+  }
+
+  .swiper-wrapper {
+  }
+
+  .swiper-slide {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 574px;
+    position: relative;
+  }
+
+  %swiper-button {
+    background-color: $colorWhite;
+    border: solid 2px $colorSite1;
+    @include border-radius(50%);
+    @include transition(all 0.3s);
+    width: 98px;
+    height: 98px;
+    color: $colorSite1;
+    font-size: 10px;
+    margin-top: -34px;
+
+    &:after {
+      display: none;
+    }
+
+    &::before {
+      position: relative;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: $colorSite1;
+      color: $colorWhite;
+    }
+  }
+
+  .swiper-button-prev {
+    @extend %swiper-button;
+
+    &:before {
+      left: -18px;
+      @include transform(scale(-1, 1));
+    }
+  }
+
+  .swiper-button-next {
+    @extend %swiper-button;
+
+    &:before {
+      left: 18px;
+    }
+  }
+}
+
+.rugs-advantages {
+  position: relative;
+  padding: 316px 0 104px;
+  z-index: 3;
+
+  .list-title-invis {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+
+    .title-invis {
+      position: absolute;
+      font-weight: 700;
+      font-size: 200px;
+      line-height: 256px;
+      text-transform: uppercase;
+      color: #ececec;
+
+      &:nth-child(1) {
+        top: 90px;
+      }
+
+      &:nth-child(2) {
+        top: 394px;
+        font-size: 150px;
+        line-height: 192px;
+        left: 254px;
+      }
+
+      &:nth-child(3) {
+        right: 0px;
+        font-size: 130px;
+        line-height: 167px;
+        top: 589px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__item {
+    width: 435px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    margin-bottom: 106px;
+
+    &:nth-child(1) {
+      grid-column: 1/2;
+    }
+
+    &:nth-child(2) {
+      grid-row: 2/2;
+      @include transform(translateX(35px));
+    }
+
+    &:nth-child(3) {
+      grid-row: 3/3;
+      @include transform(translateX(65px));
+    }
+
+    &:nth-child(4) {
+      grid-column: 2/2;
+      grid-row: 1/2;
+
+      .rugs-advantages__head {
+        padding-right: 96px;
+      }
+    }
+
+    &:nth-child(5) {
+      grid-column: 2/2;
+      grid-row: 2/2;
+      @include transform(translateX(-42px));
+
+      .rugs-advantages__head {
+        padding-right: 96px;
+      }
+
+      [class*="icon-"] {
+        font-size: 43px;
+      }
+    }
+
+    &:nth-child(6) {
+      grid-column: 2/2;
+      grid-row: 3/3;
+      @include transform(translateX(-60px));
+
+      .rugs-advantages__head {
+        padding-right: 46px;
+      }
+    }
+
+    &:nth-last-child(3),
+    &:nth-last-child(2),
+    &:nth-last-child(1) {
+      text-align: right;
+      margin-left: auto;
+
+      .rugs-advantages__head {
+        padding-left: 0;
+
+        [class*="icon-"] {
+          left: auto;
+          right: 0;
+        }
+      }
+    }
+  }
+
+  &__head {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: $colorDark;
+    padding-left: 77px;
+    position: relative;
+    min-height: 57px;
+    display: flex;
+    flex-direction: column;
+
+    & + * {
+      margin-top: 11px;
+    }
+
+    [class*="icon-"] {
+      color: $colorSite1;
+      font-size: 57px;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+
+    &__num {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $colorSite1;
+      display: block;
+      margin-top: auto;
+    }
+
+    &__name {
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 21px;
+      text-transform: uppercase;
+      display: block;
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    left: 50%;
+    top: 34px;
+    margin-left: -500px;
+    pointer-events: none;
+  }
+}

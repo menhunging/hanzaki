@@ -10,6 +10,7 @@
   letter-spacing: 0.1em;
   overflow: hidden;
   @include transition(all 0.3s);
+  text-align: center;
 
   &.btnSimple {
     background-color: $colorSite1;

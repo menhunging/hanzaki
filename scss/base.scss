@@ -79,6 +79,10 @@ input {
   font-size: 45px;
   line-height: 55px;
   color: $colorDark;
+
+  span {
+    font-weight: 300;
+  }
 }
 
 .input-list {
@@ -420,48 +424,28 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-top: 100px;
+  margin: 40px auto 0;
+
   .swiper-pagination-bullet {
     position: relative;
-    width: 10px;
-    height: 10px;
-    background-color: #e95a0c;
+    width: 20px;
+    height: 8px;
+    background-color: #e4e4e4;
     border: 0;
-    margin: 0 10px;
-    @include border-radius(50%);
+    margin: 0 8px;
+    @include border-radius(10px);
     @include transition(all 0.3s);
-    opacity: 0.5;
-    &.swiper-pagination-bullet-active,
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $colorSite1;
+      width: 31px;
+    }
+
     &:hover {
-      opacity: 1;
+      background-color: $colorSite1;
     }
   }
-}
-
-%swiper-button {
-  cursor: pointer;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 48px;
-  top: 50%;
-  @include transition(all 0.3s);
-  color: #acb6c1;
-  position: absolute;
-  &:hover {
-    color: $colorDark;
-  }
-}
-
-.swiper-button-prev {
-  @extend %swiper-button;
-  left: -135px;
-}
-
-.swiper-button-next {
-  @extend %swiper-button;
-  right: -99px;
 }
 
 // modals base
