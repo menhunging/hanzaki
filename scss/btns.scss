@@ -31,6 +31,27 @@
       background-color: $colorBlack;
     }
   }
+
+  &.btnSimpleInverted {
+    border: solid 1px $colorSite1;
+    color: $colorSite1;
+
+    &:hover {
+      background-color: $colorSite1;
+      color: $colorWhite;
+    }
+
+    @include beforeIcMoon {
+      content: "\e001";
+      font-size: 8px;
+      right: 12px;
+      top: 1px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
 %btns__call {

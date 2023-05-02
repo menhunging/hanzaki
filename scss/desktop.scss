@@ -1052,3 +1052,403 @@
     pointer-events: none;
   }
 }
+
+.work-example {
+  padding: 62px 0 68px;
+
+  &__head {
+    margin-bottom: 42px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    .caption {
+    }
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: calc(60% + 27px) 1fr;
+    grid-template-rows: 395px 395px;
+    gap: 16px 23px;
+
+    img {
+      @include border-radius(10px);
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .col {
+      position: relative;
+      @include invisLink;
+
+      &:hover {
+        [class*="icon-"] {
+          opacity: 1;
+        }
+      }
+
+      &_big {
+        grid-row: 1/3;
+      }
+    }
+
+    [class*="icon-"] {
+      background-color: rgba(228, 228, 228, 0.8);
+      @include border-radius(50%);
+      position: absolute;
+      bottom: 44px;
+      right: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 73px;
+      height: 73px;
+      font-size: 30px;
+      opacity: 0;
+      @include transition(opacity 0.3s);
+    }
+  }
+
+  .swiper {
+    left: -65px;
+    width: calc(100% + 120px);
+  }
+
+  .swiper,
+  .swiper-container {
+    overflow: visible;
+  }
+
+  .swiper-slide {
+    @include transition(opacity 0.3s);
+    opacity: 0.44;
+
+    &.swiper-slide-active {
+      opacity: 1;
+    }
+  }
+
+  .swiper-controls {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 45px;
+    color: #23262e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .swiper-pagination {
+    margin: 0;
+    width: auto;
+  }
+
+  .swiper-pagination-total {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 300;
+  }
+
+  %swiper-work-button {
+    @include transition(all 0.3s);
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    color: #b4b4b4;
+    font-size: 10px;
+    margin-top: -14px;
+
+    &:after {
+      display: none;
+    }
+
+    &::before {
+      position: relative;
+      font-size: 16px;
+      @include transition(all 0.3s);
+    }
+
+    &:hover {
+      color: $colorSite1;
+    }
+  }
+
+  .swiper-button-prev {
+    @extend %swiper-work-button;
+
+    &:before {
+      left: -18px;
+      @include transform(scale(-1, 1));
+    }
+  }
+
+  .swiper-button-next {
+    @extend %swiper-work-button;
+
+    &:before {
+      left: 18px;
+    }
+  }
+}
+
+.catalog {
+}
+
+.catalog-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 65px;
+  margin-top: 67px;
+
+  .catalog-item {
+    width: calc(100% / 5 - 52px);
+  }
+}
+
+.catalog-item {
+  &__picture {
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    color: #23262e;
+    margin-top: 10px;
+  }
+
+  &__price {
+    color: $colorDark;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 26px;
+    margin-top: 37px;
+
+    .price {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 32px;
+      margin-left: 8px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    margin-top: 14px;
+    height: 57px;
+  }
+}
+
+.reviews {
+  padding: 130px 0;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__add {
+    color: $colorDark;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 28px;
+
+    .text {
+      max-width: 470px;
+      text-align: right;
+    }
+
+    .btn {
+      min-width: 276px;
+    }
+  }
+
+  .swiper {
+    max-width: 1213px;
+    margin: 55px 0 0;
+  }
+
+  %swiper-button {
+    background-color: $colorSite1;
+    border: solid 2px $colorSite1;
+    @include border-radius(50%);
+    @include transition(all 0.3s);
+    width: 70px;
+    height: 70px;
+    color: $colorWhite;
+    font-size: 8px;
+    margin-top: -60px;
+    left: calc(100% + 290px);
+
+    &:after {
+      display: none;
+    }
+
+    &::before {
+      position: relative;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: $colorWhite;
+      color: $colorSite1;
+    }
+  }
+
+  .swiper-button-next {
+    @extend %swiper-button;
+
+    &:before {
+      left: 8px;
+    }
+  }
+
+  .swiper-button-text {
+    font-family: $fontMain;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    text-align: right;
+    color: $colorWhite;
+  }
+
+  .swiper,
+  .swiper-container {
+    overflow: visible;
+  }
+
+  .swiper-slide-active {
+    .review-item__picture {
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 67px;
+  justify-content: space-between;
+
+  &__picture {
+    max-width: 568px;
+    @include border-radius(10px);
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        0deg,
+        rgba(35, 38, 46, 0.88),
+        rgba(35, 38, 46, 0.88)
+      );
+      opacity: 1;
+      @include transition(opacity 0.3s);
+    }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 25px;
+    width: calc(100% - 610px);
+    padding-right: 115px;
+  }
+
+  &__date {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 32px;
+
+    & + * {
+      margin-top: 25px;
+    }
+  }
+}
+
+.reviews-other {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 55px;
+  gap: 12px;
+
+  &__item {
+    width: calc(100% / 5 - 10px);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: $colorDark;
+    position: relative;
+    border: solid 1px #9ca0ac;
+    padding: 15px 10px;
+    overflow: hidden;
+    @include border-radius(10px);
+    @include transition(box-shadow 0.3s);
+    @include invisLink;
+
+    [class*="icon-"] {
+      color: $colorDark;
+      font-size: 70px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      opacity: 0.1;
+    }
+
+    &_yandex {
+      background-color: $colorSite1;
+      border-color: $colorSite1;
+
+      [class*="icon-"] {
+        color: $colorWhite;
+      }
+    }
+
+    img {
+      max-width: 175px;
+      object-fit: cover;
+    }
+
+    &:hover {
+      @include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.11));
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+    display: block;
+  }
+}

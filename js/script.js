@@ -87,6 +87,81 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".work-example").length > 0) {
+    const swiper = new Swiper(".work-example .swiper", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      loop: false,
+      navigation: {
+        nextEl: ".work-example .swiper-button-next",
+        prevEl: ".work-example .swiper-button-prev",
+      },
+      pagination: {
+        el: ".work-example .swiper-pagination",
+        type: "fraction",
+      },
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1,
+        //   slidesPerGroup: 1,
+        // },
+        // 768: {
+        //   slidesPerView: 2,
+        //   slidesPerGroup: 1,
+        // },
+        // 992: {
+        //   slidesPerView: 3,
+        //   slidesPerGroup: 1,
+        // },
+        // 1200: {
+        //   slidesPerView: 4,
+        //   slidesPerGroup: 1,
+        // },
+      },
+    });
+  }
+
+  if ($(".reviews").length > 0) {
+    const swiper = new Swiper(".reviews .swiper", {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 16,
+      loop: false,
+      navigation: {
+        nextEl: ".reviews .swiper-button-next",
+        // prevEl: ".work-example .swiper-button-prev",
+      },
+      breakpoints: {
+        // 320: {
+        //   slidesPerView: 1,
+        //   slidesPerGroup: 1,
+        // },
+        // 768: {
+        //   slidesPerView: 2,
+        //   slidesPerGroup: 1,
+        // },
+        // 992: {
+        //   slidesPerView: 3,
+        //   slidesPerGroup: 1,
+        // },
+        // 1200: {
+        //   slidesPerView: 4,
+        //   slidesPerGroup: 1,
+        // },
+      },
+    });
+  }
+
+  if ($(".linkFancyBox").length > 0) {
+    Fancybox.bind("[data-fancybox]", {
+      speedIn: 600,
+      speedOut: 600,
+    });
+  }
+
+  //////////////////////////////////////////////////////////////////
+
   if ($(".menuBurger").length) {
     $(".menuBurger").on("click", function () {
       $(".menuBurger").toggleClass("open");
@@ -120,13 +195,6 @@ $(document).ready(function () {
 
     $("a[data-custom-open]").map(function () {
       $(this).click((e) => e.preventDefault());
-    });
-  }
-
-  if ($(".linkFancyBox").length > 0) {
-    Fancybox.bind("[data-fancybox]", {
-      speedIn: 600,
-      speedOut: 600,
     });
   }
 
