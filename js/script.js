@@ -190,21 +190,10 @@ $(document).ready(function () {
     });
   }
 
-  //////////////////////////////////////////////////////////////////
-
   if ($(".menuBurger").length) {
     $(".menuBurger").on("click", function () {
       $(".menuBurger").toggleClass("open");
       $(".menu").toggleClass("open");
-    });
-  }
-
-  if ($(".tabs").length > 0) {
-    $(".tabs").tabslet({
-      mouseevent: "click",
-      attribute: "href",
-      animation: true,
-      // deeplinking: true, // для hash надо попробовать
     });
   }
 
@@ -239,4 +228,28 @@ $(document).ready(function () {
       });
     });
   }
+
+  // if ($(".configurator__left").length) {
+  //   let inner_height = $(".configurator__inner").outerHeight();
+  //   let target_height = $(".configurator__left").outerHeight();
+  //   let position_bottom = inner_height - target_height;
+
+  //   let target = $(".configurator__left");
+  //   let position = target.offset().top;
+
+  //   $(window).on("scroll", function () {
+  //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  //     console.log(scrollTop)
+  //     console.log(position_bottom)
+
+  //     if (scrollTop > position && scrollTop < position_bottom) {
+  //       target.addClass("configurator__left--fixed");
+  //       return;
+  //     } else {
+  //       target.removeClass("configurator__left--fixed");
+  //     }
+  //     return;
+  //   });
+  // }
 });

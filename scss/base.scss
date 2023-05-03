@@ -19,7 +19,7 @@ input {
   flex-direction: column;
   flex-wrap: wrap;
   min-height: 100vh;
-  overflow: hidden;
+  // overflow: hidden;
 
   .footer {
     margin-top: auto;
@@ -338,86 +338,6 @@ input {
   }
 }
 
-///////////////////////////
-
-.textSimple {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 25px;
-  letter-spacing: 0.05em;
-  color: $colorDark;
-  p {
-    & + p {
-      margin-top: 25px;
-    }
-    & + img {
-      margin-top: 25px;
-    }
-  }
-  &.small {
-    font-size: 16px;
-    line-height: 23px;
-  }
-  .left {
-    float: left;
-    margin-right: 36px;
-    & + p {
-      margin-top: 36px;
-    }
-  }
-  .right {
-    float: right;
-    margin-left: 36px;
-    & + p {
-      margin-top: 36px;
-    }
-  }
-  img {
-    @include border-radius(10px);
-  }
-}
-
-.tabs {
-  .tabsHead {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin: 0 -7.5px;
-    li {
-      margin: 0 7.5px 19px;
-      &.active {
-        a {
-          color: $colorWhite;
-          background-color: $colorDark;
-        }
-      }
-    }
-    a {
-      font-weight: 500;
-      font-size: 14px;
-      line-height: 25px;
-      letter-spacing: 0.05em;
-      color: #474a51;
-      width: 100%;
-      height: 45px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 5px 29px;
-      @include border-radius(30px);
-      @include transition(all 0.3s);
-      background-color: #cad1d9;
-      &:hover {
-        color: $colorWhite;
-        background-color: $colorDark;
-      }
-    }
-  }
-  .tabsBody {
-    margin-top: 21px;
-  }
-}
-
 .swiper-pagination {
   position: relative;
   z-index: 5;
@@ -541,3 +461,4 @@ input {
     }
   }
 }
+
