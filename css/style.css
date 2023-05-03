@@ -2241,7 +2241,7 @@ input {
 }
 
 .reviews {
-  padding: 130px 0;
+  padding: 130px 0 134px;
 }
 .reviews__head {
   display: flex;
@@ -2444,6 +2444,376 @@ input {
 .reviews-other__text {
   margin-top: 10px;
   display: block;
+}
+
+.guarantes {
+  color: #23262e;
+}
+.guarantes .caption + * {
+  margin-top: 21px;
+}
+.guarantes p + p {
+  margin-top: 21px;
+}
+.guarantes__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.guarantes__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  max-width: 436px;
+}
+.guarantes__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 29px;
+  max-width: 1201px;
+  width: 100%;
+}
+.guarantes__item {
+  width: calc(33.3333333333% - 20px);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  min-height: 427px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px 56px 26px;
+}
+.guarantes__name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: rgb(255, 255, 255);
+}
+.guarantes strong {
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 32px;
+  color: rgb(21, 178, 181);
+  display: block;
+  margin-top: 35px;
+}
+
+.delivery {
+  position: relative;
+  padding: 114px 0 192px;
+  background-image: url(../img/word.png);
+  background-position: calc(50% + 95px) 143px;
+  background-repeat: no-repeat;
+}
+.delivery__content {
+  max-width: 690px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: #23262e;
+}
+.delivery .caption + * {
+  margin-top: 21px;
+}
+.delivery .car {
+  position: absolute;
+  background-image: url(../img/car.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 1188px;
+  height: 789px;
+  position: absolute;
+  top: -27px;
+  left: calc(50% - 71px);
+}
+
+.faq {
+  margin-top: 38px;
+  max-width: 655px;
+}
+.faq__item + * {
+  margin-top: 18px;
+}
+.faq__item:first-child .faq__answer {
+  display: block;
+}
+.faq .active .faq__quest [class*=icon-] {
+  background-color: rgb(21, 178, 181);
+  color: rgb(255, 255, 255);
+}
+.faq .active .faq__quest [class*=icon-]::before {
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -webkit-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+.faq__quest {
+  border-bottom: 1px solid #8b8d91;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 26px;
+  color: rgb(21, 178, 181);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 17px;
+}
+.faq__quest:hover [class*=icon-] {
+  background-color: rgb(21, 178, 181);
+  color: rgb(255, 255, 255);
+}
+.faq__quest [class*=icon-] {
+  border: 1px solid rgb(21, 178, 181);
+  right: 0;
+  top: 50%;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  font-size: 10px;
+  padding-bottom: 10px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.faq__answer {
+  display: none;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: #525459;
+  padding: 12px 0 39px;
+  border-bottom: 1px solid #8b8d91;
+}
+
+.faq-controls {
+  color: rgb(0, 0, 0);
+  margin-top: 39px;
+}
+.faq-controls__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  margin-right: 15px;
+}
+.faq-controls__price {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 25px;
+  margin-right: 35px;
+}
+.faq-controls__link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 21px;
+  color: rgb(21, 178, 181);
+  margin-left: 0;
+  text-decoration: underline;
+  -webkit-transition: text-decoration-color 0.3s;
+  -moz-transition: text-decoration-color 0.3s;
+  -o-transition: text-decoration-color 0.3s;
+  transition: text-decoration-color 0.3s;
+}
+.faq-controls__link:hover {
+  text-decoration-color: transparent;
+}
+
+.footer {
+  background-color: #23262e;
+  color: rgb(255, 255, 255);
+  padding: 69px 0;
+}
+
+.contacts {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 23px;
+}
+.contacts .caption {
+  color: rgb(255, 255, 255);
+  width: 100%;
+  margin-bottom: 7px;
+}
+.contacts__adress {
+  margin-right: 44px;
+}
+.contacts__adress [class*=icon-] {
+  font-size: 20px;
+  margin-right: 9px;
+}
+.contacts__mail {
+  margin-right: 65px;
+  display: flex;
+  align-items: center;
+}
+.contacts__mail [class*=icon-] {
+  font-size: 25px;
+  margin-right: 12px;
+}
+.contacts__mail a {
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration 0.3s;
+  -moz-transition: text-decoration 0.3s;
+  -o-transition: text-decoration 0.3s;
+  transition: text-decoration 0.3s;
+}
+.contacts__mail a:hover {
+  text-decoration-color: rgb(255, 255, 255);
+}
+.contacts__social {
+  margin: 0 auto;
+}
+.contacts__social ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.contacts .header__phone {
+  margin-right: 25px;
+}
+.contacts .btn-phone {
+  background-color: transparent;
+  border: solid 1px rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  padding-left: 65px;
+  padding-right: 26px;
+  min-width: 170px;
+}
+.contacts .btn-phone:hover {
+  background-color: rgb(255, 255, 255);
+  color: #23262e;
+}
+.contacts .btn-phone:hover [class*=icon-] {
+  left: 0;
+  color: #23262e;
+  border-color: #23262e;
+}
+.contacts .btn-phone [class*=icon-] {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  border-right: solid 1px rgb(255, 255, 255);
+  height: 21px;
+  top: 50%;
+  margin-top: -10px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+.map {
+  margin-top: 40px;
+  width: 100%;
+  height: 407px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  flex-wrap: wrap;
+  padding: 58px 0px 0px;
+}
+.footer__bottom .col {
+  text-align: center;
+}
+.footer__bottom .col:first-child {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.footer__bottom .col:last-child {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.footer__bottom .title {
+  font-weight: 300;
+  font-size: 35px;
+  line-height: 45px;
+}
+.footer__bottom .name {
+  font-weight: 400;
+  font-size: 50px;
+  line-height: 39px;
+}
+.footer__bottom .text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+  margin-top: 38px;
+  display: block;
+}
+.footer__bottom .logoWrapper {
+  margin-bottom: 45px;
+}
+.footer__bottom .link {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 18px;
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  -webkit-transition: text-decoration 0.3s;
+  -moz-transition: text-decoration 0.3s;
+  -o-transition: text-decoration 0.3s;
+  transition: text-decoration 0.3s;
+}
+.footer__bottom .link:hover {
+  text-decoration-color: rgb(255, 255, 255);
+}
+
+.link-page-up {
+  background-color: rgb(21, 178, 181);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  width: 46px;
+  height: 46px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 5px;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  color: rgb(255, 255, 255);
+}
+.link-page-up:hover {
+  color: #23262e;
+  background-color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=style.css.map */

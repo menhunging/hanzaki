@@ -160,6 +160,36 @@ $(document).ready(function () {
     });
   }
 
+  if ($(".faq").length) {
+    let quest = $(".faq__quest");
+
+    quest.click(function () {
+      if ($(this).parents(".faq__item").hasClass("active")) {
+        $(".faq__item").stop().removeClass("active");
+        $(".faq__answer").stop().slideUp();
+        return false;
+      }
+
+      $(".faq__item").stop().removeClass("active");
+      $(".faq__answer").stop().slideUp();
+
+      $(this)
+        .parents(".faq__item")
+        .stop()
+        .toggleClass("active")
+        .find(".faq__answer")
+        .stop()
+        .slideDown();
+    });
+  }
+
+  if ($(".link-page-up").length > 0) {
+    $(".link-page-up").click(function (e) {
+      e.preventDefault();
+      $(window).scrollTop(0);
+    });
+  }
+
   //////////////////////////////////////////////////////////////////
 
   if ($(".menuBurger").length) {
