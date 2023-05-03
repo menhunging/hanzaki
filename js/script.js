@@ -57,6 +57,15 @@ $(document).ready(function () {
     const swiper = new Swiper(".rugs-slider .swiper", {
       slidesPerView: 1,
       slidesPerGroup: 1,
+      effect: "creative",
+      creativeEffect: {
+        prev: {
+          translate: ["-120%", 0, -500],
+        },
+        next: {
+          translate: ["120%", 0, -500],
+        },
+      },
       loop: false,
       navigation: {
         nextEl: ".rugs-slider .swiper-button-next",
@@ -205,10 +214,13 @@ $(document).ready(function () {
     MicroModal.init({
       openTrigger: "data-custom-open",
       disableScroll: true,
-      awaitCloseAnimation: true,
-      onShow: () => {
-        $(".modal__container").scrollTop(0);
-        $(".modalWrap .scroll").scrollTop(-500);
+
+      onShow: (modal) => {
+        $("body").addClass("modal-open");
+      },
+
+      onClose: (modal) => {
+        $("body").removeClass("modal-open");
       },
     });
 
@@ -228,28 +240,4 @@ $(document).ready(function () {
       });
     });
   }
-
-  // if ($(".configurator__left").length) {
-  //   let inner_height = $(".configurator__inner").outerHeight();
-  //   let target_height = $(".configurator__left").outerHeight();
-  //   let position_bottom = inner_height - target_height;
-
-  //   let target = $(".configurator__left");
-  //   let position = target.offset().top;
-
-  //   $(window).on("scroll", function () {
-  //     let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-  //     console.log(scrollTop)
-  //     console.log(position_bottom)
-
-  //     if (scrollTop > position && scrollTop < position_bottom) {
-  //       target.addClass("configurator__left--fixed");
-  //       return;
-  //     } else {
-  //       target.removeClass("configurator__left--fixed");
-  //     }
-  //     return;
-  //   });
-  // }
 });

@@ -43,7 +43,8 @@
             <div class="header__col">
               <a href="tel:89009009990" class="header__phone">8 (900) 900-99-90</a>
               <button class="btn-whatsapp"> <span class="icon-whatsapp"></span> Написать Whats App</button>
-              <button class="btn-phone"> <span class="icon-phone"></span> Заказать звонок</button>
+              <button class="btn-phone" data-custom-open="modalCall"> <span class="icon-phone"></span> Заказать
+                звонок</button>
             </div>
           </div>
           <nav class="menu">
@@ -66,7 +67,7 @@
             <a href="#"></a>
             <img src="img/logo.svg" alt="logo">
           </div>
-          <button class="menu-burger ">
+          <button class="menu-burger">
             <span class="line"></span>
             <span class="line"></span>
             <span class="line"></span>
@@ -522,7 +523,7 @@
                       <a href="#" class="price-block__link">Подробнее</a>
                     </div>
                     <div class="price-block__line">
-                      <button type="submit" class="btn btnSimple">Купить</button>
+                      <button type="submit" class="btn btnSimple" data-custom-open="modalCheckout">Купить</button>
                     </div>
                   </div>
                 </div>
@@ -536,49 +537,106 @@
         <div class="container">
           <div class="rugs-slider">
             <h2 class="caption">Наборы <span>еva-ковриков</span></h2>
-
             <div class="rugs-slider__content">
-              <div class="rugs-slider__leftSide">
-                <h2 class="rugs-slider__title">Eva-коврик</h2>
-                <span class="rugs-slider__desc">для водительского места</span>
-                <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью повторяют
-                  форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
-                <div class="rugs-slider__price">
-                  <span class="title">стоимость</span>
-                  <span class="price">2 000 ₽</span>
-                </div>
-                <a href="#" class="btn btnSimple">Купить</a>
-                <span class="info">?</span>
-              </div>
-
-              <div class="rugs-slider__righSide">
-                <div class="swiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="rugs-slider__leftSide">
+                      <h2 class="rugs-slider__title">Eva-коврик</h2>
+                      <span class="rugs-slider__desc">для водительского места</span>
+                      <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью
+                        повторяют
+                        форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
+                      <div class="rugs-slider__price">
+                        <span class="title">стоимость</span>
+                        <span class="price">2 000 ₽</span>
+                      </div>
+                      <a href="#" class="btn btnSimple">Купить</a>
+                      <span class="info" data-custom-open="modalInfo">?</span>
+                    </div>
+                    <div class="rugs-slider__righSide">
                       <img src="img/rugs1.png" alt="">
                     </div>
-                    <div class="swiper-slide">
+
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="rugs-slider__leftSide">
+                      <h2 class="rugs-slider__title">Eva-коврик</h2>
+                      <span class="rugs-slider__desc">на передний ряд</span>
+                      <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью
+                        повторяют
+                        форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
+                      <div class="rugs-slider__price">
+                        <span class="title">стоимость</span>
+                        <span class="price">2 000 ₽</span>
+                      </div>
+                      <a href="#" class="btn btnSimple">Купить</a>
+                      <span class="info" data-custom-open="modalInfo">?</span>
+                    </div>
+                    <div class="rugs-slider__righSide">
                       <img src="img/rugs2.png" alt="">
                     </div>
-                    <div class="swiper-slide">
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="rugs-slider__leftSide">
+                      <h2 class="rugs-slider__title">Eva-коврик</h2>
+                      <span class="rugs-slider__desc">на задний ряд</span>
+                      <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью
+                        повторяют
+                        форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
+                      <div class="rugs-slider__price">
+                        <span class="title">стоимость</span>
+                        <span class="price">2 000 ₽</span>
+                      </div>
+                      <a href="#" class="btn btnSimple">Купить</a>
+                      <span class="info" data-custom-open="modalInfo">?</span>
+                    </div>
+                    <div class="rugs-slider__righSide">
                       <img src="img/rugs3.png" alt="">
                     </div>
-                    <div class="swiper-slide">
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="rugs-slider__leftSide">
+                      <h2 class="rugs-slider__title">Eva-коврик</h2>
+                      <span class="rugs-slider__desc">полный комплект</span>
+                      <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью
+                        повторяют
+                        форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
+                      <div class="rugs-slider__price">
+                        <span class="title">стоимость</span>
+                        <span class="price">2 000 ₽</span>
+                      </div>
+                      <a href="#" class="btn btnSimple">Купить</a>
+                      <span class="info" data-custom-open="modalInfo">?</span>
+                    </div>
+                    <div class="rugs-slider__righSide">
                       <img src="img/rugs4.png" alt="">
                     </div>
-                    <div class="swiper-slide">
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="rugs-slider__leftSide">
+                      <h2 class="rugs-slider__title">Eva-коврик</h2>
+                      <span class="rugs-slider__desc">в багажник</span>
+                      <p>Все автоковры изготавливаются из ЕВА по оригинальным лекалам, благодаря чему полностью
+                        повторяют
+                        форму салона, все заводские выступы и вырезы напольного покрытия автомобиля...</p>
+                      <div class="rugs-slider__price">
+                        <span class="title">стоимость</span>
+                        <span class="price">2 000 ₽</span>
+                      </div>
+                      <a href="#" class="btn btnSimple">Купить</a>
+                      <span class="info" data-custom-open="modalInfo">?</span>
+                    </div>
+                    <div class="rugs-slider__righSide">
                       <img src="img/rugs5.png" alt="">
                     </div>
                   </div>
-                  <button class="swiper-button-prev icon-arrow-swiper"></button>
-                  <button class="swiper-button-next icon-arrow-swiper"></button>
-                  <div class="swiper-pagination"></div>
                 </div>
+                <button class="swiper-button-prev icon-arrow-swiper"></button>
+                <button class="swiper-button-next icon-arrow-swiper"></button>
+                <div class="swiper-pagination"></div>
               </div>
-
-
             </div>
-
           </div>
           <div class="rugs-advantages">
             <div class="list-title-invis">
@@ -650,7 +708,6 @@
 
           </div>
         </div>
-
       </section>
 
       <section class="work-example">
@@ -779,7 +836,7 @@
             <div class="reviews__add">
               <span class="text">Хотите оставить отзыв о нашей продукции? Заполните форму, после модерации, ваш отзыв
                 появится на сайте</span>
-              <a href="#" class="btn btnSimple">Написать отзыв</a>
+              <a href="#" class="btn btnSimple" data-custom-open="modalWrite">Написать отзыв</a>
             </div>
           </div>
           <div class="swiper">
@@ -945,7 +1002,8 @@
                   <div class="faq-controls">
                     <spa class="faq-controls__title">Стоимость доставки:</spa>
                     <span class="faq-controls__price">от 257 ₽</span>
-                    <a href="#" class="faq-controls__link">Уточнить по доставке</a>
+                    <a href="#" class="faq-controls__link" data-custom-open="modalCheckDelibery">Уточнить по
+                      доставке</a>
                   </div>
                 </div>
               </div>
@@ -963,7 +1021,8 @@
                   <div class="faq-controls">
                     <spa class="faq-controls__title">Стоимость доставки:</spa>
                     <span class="faq-controls__price">от 257 ₽</span>
-                    <a href="#" class="faq-controls__link">Уточнить по доставке</a>
+                    <a href="#" class="faq-controls__link" data-custom-open="modalCheckDelibery">Уточнить по
+                      доставке</a>
                   </div>
                 </div>
               </div>
@@ -1002,7 +1061,8 @@
               </ul>
             </div>
             <a href="tel:89009009990" class="header__phone">8 (900) 900-99-90</a>
-            <button class="btn-phone"> <span class="icon-phone"></span> Заказать звонок</button>
+            <button class="btn-phone" data-custom-open="modalCall"> <span class="icon-phone"></span> Заказать
+              звонок</button>
           </div>
           <div class="map">
             <iframe
@@ -1035,6 +1095,182 @@
   </div>
 
   <button class="btnArrowUp"></button>
+
+  <div class="micromodal-slide modal" id="modalCall" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption modal__caption">Заказать звонок</h2>
+              <span class="modal__desc">Заполните форму и мы вам перезвоним</span>
+              <div class="input-list">
+                <div class="input-item">
+                  <input type="text" placeholder="Ваше имя">
+                  <span class="input-item__icon icon-people"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш телефон" class="phoneInput" inputmode="text">
+                  <span class="input-item__icon icon-phone"></span>
+                </div>
+              </div>
+              <div class="controls">
+                <button class="btn btnSimple">Заказать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modalCheckout" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption modal__caption">Оформить заказ</h2>
+              <span class="modal__desc">Заполните форму и мы вам перезвоним</span>
+              <div class="input-list">
+                <div class="input-item">
+                  <input type="text" placeholder="Ваше имя">
+                  <span class="input-item__icon icon-people"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш телефон" class="phoneInput" inputmode="text">
+                  <span class="input-item__icon icon-phone"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш e-mail">
+                  <span class="input-item__icon icon-mail"></span>
+                </div>
+              </div>
+              <div class="checkBlock">
+                <input type="checkbox" id="personal" required>
+                <label for="personal">Даю согласие на обработку персональных данных</a></label>
+              </div>
+              <div class="controls">
+                <button class="btn btnSimple">Заказать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modalInfo" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <h2 class="caption">Краткое описание</h2>
+            <div class="textModal">
+              <p>Автомобильные коврики для Renault Arkana I 2019 - н.в. изготовлены из качественного полимера.</p>
+              <p>Инновационный материал EVA, из которого делаются аксессуары, имеет ряд преимуществ:</p>
+              <ul>
+                <li>Особая ячеистая структура, обеспечивающая полноценную защиту салона от влаги, пыли, грязи и снега.
+                  Даже в очень сырую погоду в салоне будет сухо и чисто.</li>
+                <li>Прочность и эластичность, благодаря чему покрытие не мнется и не деформируется даже при активной
+                  эксплуатации.</li>
+                <li>Морозостойкость и жаростойкость, что делает комфортным использование коврика и зимой, и летом.</li>
+                <li>Легкая очистка. Для того, чтобы почистить коврик его достаточно отстегнуть, вытряхнуть и поставить
+                  на место. При более сильных загрязнениях можно помыть под напором воды.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modalCheckDelibery" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption modal__caption">Уточнить по доставке</h2>
+              <span class="modal__desc">Заполните форму и мы вам перезвоним</span>
+              <div class="input-list">
+                <div class="input-item">
+                  <input type="text" placeholder="Ваше имя">
+                  <span class="input-item__icon icon-people"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш телефон" class="phoneInput" inputmode="text">
+                  <span class="input-item__icon icon-phone"></span>
+                </div>
+              </div>
+              <div class="controls">
+                <button class="btn btnSimple">Заказать</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="micromodal-slide modal" id="modalWrite" aria-hidden="true">
+    <div class="modal__overlay" tabindex="-1" data-micromodal-close>
+      <div class="modal__container" role="dialog" aria-modal="true">
+        <div class="modal__inner">
+          <button class="modal__close" aria-label="Close modal" data-micromodal-close>
+            <span></span>
+            <span></span>
+          </button>
+          <div class="modal__content" autocomplete="off">
+            <form class="modal__form">
+              <h2 class="caption modal__caption">Написать отзыв</h2>
+              <span class="modal__desc">Заполните форму и после модерации ваш отзыв будет опубликован</span>
+              <div class="input-list">
+                <div class="input-item">
+                  <input type="text" placeholder="Ваше имя">
+                  <span class="input-item__icon icon-people"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш телефон" class="phoneInput" inputmode="text">
+                  <span class="input-item__icon icon-phone"></span>
+                </div>
+                <div class="input-item">
+                  <input type="text" placeholder="Ваш e-mail">
+                  <span class="input-item__icon icon-mail"></span>
+                </div>
+                <div class="input-item">
+                  <textarea type="text" placeholder="Ваш отзыв"></textarea>
+                </div>
+              </div>
+              <div class="controls">
+                <button class="btn btnSimple">Заказать</button>
+                <div class="checkBlock">
+                  <input type="checkbox" id="personal4" required>
+                  <label for="personal4">Даю согласие на обработку персональных данных</a></label>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="js/jquery-3.6.4.min.js"></script>
   <script src="js/swiper-bundle.min.js"></script>

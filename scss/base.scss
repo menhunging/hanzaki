@@ -112,7 +112,7 @@ input {
 
   textarea {
     @extend %stylesInput;
-    height: 150px;
+    height: 100%;
   }
   input {
     @extend %stylesInput;
@@ -320,7 +320,7 @@ input {
       top: 50%;
       width: 25px;
       height: 25px;
-      margin-top: -10px;
+      margin-top: -12.5px;
       border: solid 1px $colorSite1;
       @include border-radius(50%);
     }
@@ -330,7 +330,7 @@ input {
       top: 50%;
       width: 15px;
       height: 15px;
-      margin-top: -5px;
+      margin-top: -7.5px;
       background-color: $colorSite1;
       @include border-radius(50%);
       opacity: 0;
@@ -374,6 +374,9 @@ input {
   font-family: $fontMain;
   display: none;
   width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
 }
 
 .modal.is-open {
@@ -392,14 +395,10 @@ input {
   padding: 50px 0;
 }
 
-.modalBlock {
-  .modalBlockContent {
-  }
-}
-
 .modal__content {
   padding: 0;
   margin: 0;
+
   .link {
     font-size: 14px;
     line-height: 25px;
@@ -415,16 +414,18 @@ input {
 }
 
 .modal__close {
-  width: 33px;
-  height: 33px;
-  padding: 10px;
-  background-color: $colorDark;
+  width: 46px;
+  height: 46px;
+  padding: 18px;
+  background-color: $colorSite1;
   @include border-radius(50%);
   position: absolute;
-  right: -32px;
-  top: -32px;
+  right: 27px;
+  top: 32px;
   display: block;
   @include transition(all 0.3s);
+  z-index: 10;
+
   span {
     position: relative;
     display: block;
@@ -438,7 +439,7 @@ input {
     }
   }
   &:hover {
-    background-color: $colorWhite;
+    background-color: $colorDark;
   }
 }
 
@@ -462,3 +463,194 @@ input {
   }
 }
 
+.modal {
+  &__inner {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    max-width: 489px;
+    width: 100%;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 5;
+    background-color: $colorWhite;
+    @include box-shadow(0px 4px 35px rgba(0, 0, 0, 0.15));
+    @include border-radius(10px);
+    overflow: hidden;
+    padding: 87px 0 56px;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      pointer-events: none;
+      background-image: url("../img/logo-big-company.png");
+      background-position: left top;
+      background-repeat: no-repeat;
+      background-size: 225%;
+    }
+  }
+
+  &__desc {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 21px;
+    color: $colorBlack;
+    display: block;
+  }
+
+  .input-list {
+    max-width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+  .input-item {
+    & + .input-item {
+      margin-top: 10px;
+    }
+  }
+
+  .caption {
+    font-size: 35px;
+    line-height: 45px;
+
+    & + * {
+      margin-top: 10px;
+    }
+  }
+
+  .controls {
+    margin-top: 26px;
+
+    .btn {
+      min-width: 276px;
+    }
+  }
+
+  .checkBlock {
+    max-width: 365px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 13px;
+
+    label {
+      &:after,
+      &::before {
+        @include border-radius(0);
+      }
+    }
+  }
+}
+
+#modalInfo {
+  .modal__inner {
+    max-width: 768px;
+    width: 100%;
+    text-align: left;
+  }
+
+  .modal__content {
+    padding: 80px 60px;
+
+    &::before {
+      background-size: auto;
+      width: 410px;
+      left: 50%;
+      margin-left: -205px;
+      background-position: left center;
+    }
+  }
+}
+
+#modalWrite {
+  .modal__inner {
+    max-width: 843px;
+    width: 100%;
+  }
+
+  .modal__content {
+    &::before {
+      background-size: auto;
+      width: 410px;
+      left: 50%;
+      margin-left: -205px;
+      background-position: left center;
+    }
+  }
+
+  .input-list {
+    max-width: 739px;
+    display: grid;
+    gap: 11px 9px;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+    .input-item {
+      & + .input-item {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        grid-row: 1/4;
+        grid-column: 2/2;
+      }
+    }
+  }
+
+  .controls {
+    max-width: 739px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 29px;
+    justify-content: flex-start;
+
+    .checkBlock {
+      margin: 0;
+    }
+  }
+}
+
+.textModal {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 25px;
+  color: $colorDark;
+
+  ul {
+    padding-left: 15px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 10px;
+
+    @include before {
+      left: 0;
+      top: 11px;
+      width: 5px;
+      height: 5px;
+      background-color: $colorBlack;
+      @include border-radius(50%);
+    }
+  }
+}
+
+// хак для хрома (modal hidden body)
+
+_:-webkit-any-link,
+:root .modal-open {
+  padding-right: 17px;
+
+  .header {
+    width: calc(100% - 17px);
+  }
+}
