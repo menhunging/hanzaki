@@ -254,31 +254,32 @@ $(document).ready(function () {
 });
 
 function setScrollMargin(hashLoad) {
-  let scroll = null;
+  let maring = 0;
+  let width = $(window).width();
 
-  if ($(window).width() >= 1440) {
-    scroll = $(hashLoad).offset().top - 118;
+  if (width >= 1440) {
+    maring = 118;
   }
 
-  if ($(window).width() < 1440) {
-    scroll = $(hashLoad).offset().top - 80;
+  if (width < 1440) {
+    maring = 80;
   }
 
-  if ($(window).width() < 1200) {
-    scroll = $(hashLoad).offset().top - 100;
+  if (width < 1200) {
+    maring = 100;
   }
 
-  if ($(window).width() < 992) {
-    scroll = $(hashLoad).offset().top - 80;
+  if (width < 992) {
+    maring = 80;
   }
 
-  if ($(window).width() < 767) {
-    scroll = $(hashLoad).offset().top - 75;
+  if (width < 767) {
+    maring = 75;
   }
 
-  if ($(window).width() < 480) {
-    scroll = $(hashLoad).offset().top - 60;
+  if (width < 480) {
+    maring = 60;
   }
 
-  return scroll;
+  return $(hashLoad).offset().top - maring;
 }
