@@ -862,15 +862,16 @@ input {
   border-radius: 50%;
 }
 
-_:-webkit-any-link,
-:root .modal-open {
-  padding-right: 17px;
+@media (min-width: 1200px) {
+  _:-webkit-any-link,
+  :root .modal-open {
+    padding-right: 17px;
+  }
+  _:-webkit-any-link .header,
+  :root .modal-open .header {
+    width: calc(100% - 17px);
+  }
 }
-_:-webkit-any-link .header,
-:root .modal-open .header {
-  width: calc(100% - 17px);
-}
-
 .btn {
   position: relative;
   display: inline-block;

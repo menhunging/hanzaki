@@ -651,11 +651,13 @@ input {
 
 // хак для хрома (modal hidden body)
 
-_:-webkit-any-link,
-:root .modal-open {
-  padding-right: 17px;
+@media (min-width: 1200px) {
+  _:-webkit-any-link,
+  :root .modal-open {
+    padding-right: 17px;
 
-  .header {
-    width: calc(100% - 17px);
+    .header {
+      width: calc(100% - 17px);
+    }
   }
 }
