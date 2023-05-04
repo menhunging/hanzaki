@@ -58,6 +58,12 @@
     margin-top: -34px;
   }
 
+  &__mobile {
+    display: none;
+
+    .logoWrapper{}
+  }
+
   &_scroll {
     background-color: $colorWhite;
     color: $colorBlack;

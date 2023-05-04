@@ -49,20 +49,27 @@
           </div>
           <nav class="menu">
             <ul>
-              <li><a href="#">Главная</a></li>
-              <li><a href="#">Собрать коврик</a></li>
-              <li><a href="#">Наборы</a></li>
-              <li><a href="#">Преимущества</a></li>
-              <li><a href="#">Портфолио</a></li>
+              <li><a href="#" data-link="#index">Главная</a></li>
+              <li><a href="#" data-link="#contructor">Собрать коврик</a></li>
+              <li><a href="#" data-link="#sets">Наборы</a></li>
+              <li><a href="#" data-link="#adv">Преимущества</a></li>
+              <li><a href="#" data-link="#portfolio">Портфолио</a></li>
             </ul>
             <ul>
-              <li><a href="#">Сумки в багажник</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Гарантии</a></li>
-              <li><a href="#">Доставка</a></li>
-              <li><a href="#">Контакты</a></li>
+              <li><a href="#" data-link="#catalog">Сумки в багажник</a></li>
+              <li><a href="#" data-link="#reviews">Отзывы</a></li>
+              <li><a href="#" data-link="#garant">Гарантии</a></li>
+              <li><a href="#" data-link="#delivery">Доставка</a></li>
+              <li><a href="#" data-link="#contacts">Контакты</a></li>
             </ul>
           </nav>
+          <div class="logoWrapper">
+            <a href="#"></a>
+            <img src="img/logo.svg" alt="logo">
+          </div>
+
+        </div>
+        <div class="header__mobile">
           <div class="logoWrapper">
             <a href="#"></a>
             <img src="img/logo.svg" alt="logo">
@@ -77,7 +84,7 @@
     </header>
 
     <main class="main">
-      <section class="grettings" style="background-image: url(img/back-grettings.jpg)">
+      <section class="grettings" id="index" style="background-image: url(img/back-grettings.jpg)">
         <div class="container">
           <div class="grettings__content">
             <h2 class="grettings__title">Автомобильные eva - коврики</h2>
@@ -119,7 +126,7 @@
         </div>
       </section>
 
-      <section class="configurator">
+      <section class="configurator" id="contructor">
         <div class="container">
           <div class="configurator__inner">
             <h2 class="caption">Конфигуратор</h2>
@@ -533,7 +540,7 @@
         </div>
       </section>
 
-      <section class="rugs-info">
+      <section class="rugs-info" id="sets">
         <div class="container">
           <div class="rugs-slider">
             <h2 class="caption">Наборы <span>еva-ковриков</span></h2>
@@ -638,7 +645,7 @@
               </div>
             </div>
           </div>
-          <div class="rugs-advantages">
+          <div class="rugs-advantages" id="adv">
             <div class="list-title-invis">
               <h2 class="title-invis">Преимущества</h2>
               <h2 class="title-invis">EVA</h2>
@@ -710,7 +717,7 @@
         </div>
       </section>
 
-      <section class="work-example">
+      <section class="work-example" id="portfolio">
         <div class="container">
           <div class="work-example__head">
             <h2 class="caption">Примеры <span>работ</span></h2>
@@ -765,7 +772,7 @@
         </div>
       </section>
 
-      <section class="catalog">
+      <section class="catalog" id="catalog">
         <div class="container">
           <h2 class="caption">Стильные сумки <span>в багажник авто</span></h2>
 
@@ -829,7 +836,7 @@
         </div>
       </section>
 
-      <section class="reviews">
+      <section class="reviews" id="reviews">
         <div class="container">
           <div class="reviews__head">
             <h2 class="caption">Отзывы <span>о нас</span></h2>
@@ -949,7 +956,7 @@
         </div>
       </section>
 
-      <section class="guarantes">
+      <section class="guarantes" id="garant">
         <div class="container">
           <div class="guarantes__inner">
             <div class="guarantes__text">
@@ -978,7 +985,7 @@
         </div>
       </section>
 
-      <section class="delivery">
+      <section class="delivery" id="delivery">
         <div class="container">
           <div class="delivery__content">
             <h2 class="caption">Доставка</h2>
@@ -1033,7 +1040,7 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="contacts">
       <div class="container">
         <div class="footer__content">
           <div class="contacts">

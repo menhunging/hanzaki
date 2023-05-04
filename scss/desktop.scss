@@ -1321,6 +1321,7 @@
     width: 100%;
     margin-top: 14px;
     height: 57px;
+    line-height: 46px;
   }
 }
 
@@ -1628,6 +1629,7 @@
     position: absolute;
     top: -27px;
     left: calc(50% - 71px);
+    pointer-events: none;
   }
 }
 

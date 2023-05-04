@@ -76,22 +76,13 @@ $(document).ready(function () {
         clickable: true,
       },
       breakpoints: {
-        // 320: {
-        //   slidesPerView: 1,
-        //   slidesPerGroup: 1,
-        // },
-        // 768: {
-        //   slidesPerView: 2,
-        //   slidesPerGroup: 1,
-        // },
-        // 992: {
-        //   slidesPerView: 3,
-        //   slidesPerGroup: 1,
-        // },
-        // 1200: {
-        //   slidesPerView: 4,
-        //   slidesPerGroup: 1,
-        // },
+        320: {
+          slidesPerView: 1,
+          autoHeight: true,
+        },
+        640: {
+          slidesPerView: 1,
+        },
       },
     });
   }
@@ -111,22 +102,13 @@ $(document).ready(function () {
         type: "fraction",
       },
       breakpoints: {
-        // 320: {
-        //   slidesPerView: 1,
-        //   slidesPerGroup: 1,
-        // },
-        // 768: {
-        //   slidesPerView: 2,
-        //   slidesPerGroup: 1,
-        // },
-        // 992: {
-        //   slidesPerView: 3,
-        //   slidesPerGroup: 1,
-        // },
-        // 1200: {
-        //   slidesPerView: 4,
-        //   slidesPerGroup: 1,
-        // },
+        320: {
+          slidesPerView: 1,
+          autoHeight: true,
+        },
+        640: {
+          slidesPerView: 1,
+        },
       },
     });
   }
@@ -139,25 +121,6 @@ $(document).ready(function () {
       loop: false,
       navigation: {
         nextEl: ".reviews .swiper-button-next",
-        // prevEl: ".work-example .swiper-button-prev",
-      },
-      breakpoints: {
-        // 320: {
-        //   slidesPerView: 1,
-        //   slidesPerGroup: 1,
-        // },
-        // 768: {
-        //   slidesPerView: 2,
-        //   slidesPerGroup: 1,
-        // },
-        // 992: {
-        //   slidesPerView: 3,
-        //   slidesPerGroup: 1,
-        // },
-        // 1200: {
-        //   slidesPerView: 4,
-        //   slidesPerGroup: 1,
-        // },
       },
     });
   }
@@ -199,10 +162,10 @@ $(document).ready(function () {
     });
   }
 
-  if ($(".menuBurger").length) {
-    $(".menuBurger").on("click", function () {
-      $(".menuBurger").toggleClass("open");
-      $(".menu").toggleClass("open");
+  if ($(".menu-burger").length) {
+    $(".menu-burger").on("click", function () {
+      $(".menu-burger").stop().toggleClass("open");
+      $(".header__inner").stop().slideToggle();
     });
   }
 
@@ -240,4 +203,82 @@ $(document).ready(function () {
       });
     });
   }
+
+  if ($(".menu").length > 0) {
+    if (location.hash != "") {
+      let scroll;
+      hashLoad = location.hash;
+
+      scroll = setScrollMargin(hashLoad);
+
+      $("html, body").animate(
+        {
+          scrollTop: scroll,
+        },
+        {
+          duration: 0,
+          easing: "linear",
+        }
+      );
+    }
+
+    $(".menu ul li a").on("click", function () {
+      if ($(".menu-burger").hasClass("open")) {
+        $(".menu-burger").trigger("click");
+      }
+
+      if ($(this).attr("data-link")) {
+        let href = $(this).attr("data-link");
+        let settingsScroll;
+
+        if ($(window).width() < 1440) {
+          settingsScroll = $(href).offset().top - 59;
+        } else {
+          settingsScroll = $(href).offset().top - 120;
+        }
+
+        settingsScroll = setScrollMargin(href);
+
+        $("html, body").animate(
+          {
+            scrollTop: settingsScroll,
+          },
+          {
+            duration: 370,
+            easing: "linear",
+          }
+        );
+      }
+    });
+  }
 });
+
+function setScrollMargin(hashLoad) {
+  let scroll = null;
+
+  if ($(window).width() >= 1440) {
+    scroll = $(hashLoad).offset().top - 118;
+  }
+
+  if ($(window).width() < 1440) {
+    scroll = $(hashLoad).offset().top - 80;
+  }
+
+  if ($(window).width() < 1200) {
+    scroll = $(hashLoad).offset().top - 100;
+  }
+
+  if ($(window).width() < 992) {
+    scroll = $(hashLoad).offset().top - 80;
+  }
+
+  if ($(window).width() < 767) {
+    scroll = $(hashLoad).offset().top - 75;
+  }
+
+  if ($(window).width() < 480) {
+    scroll = $(hashLoad).offset().top - 60;
+  }
+
+  return scroll;
+}

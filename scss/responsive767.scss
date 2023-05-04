@@ -1,2 +1,260 @@
 @media (max-width: 767px) {
+  .container {
+    max-width: 100%;
+  }
+
+  .grettings__advitem {
+    width: 50%;
+  }
+
+  .grettings__advitem {
+    width: calc(50% - 105px);
+  }
+
+  .grettings__title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .grettings__name {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .grettings__content {
+    min-height: 200px;
+  }
+
+  .grettings__advantages {
+    margin-top: 20px;
+  }
+
+  .header__col {
+    max-width: 430px;
+    justify-content: center;
+
+    &:nth-child(2) {
+      display: grid;
+      justify-content: center;
+      gap: 10px;
+      padding: 0;
+    }
+
+    .header__phone {
+      text-align: center;
+    }
+  }
+
+  .menu {
+    ul {
+      gap: 5%;
+    }
+  }
+
+  .menu-burger {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header {
+    .logoWrapper {
+      width: 50px;
+      @include transform(scale(1));
+    }
+  }
+
+  .grettings {
+    padding-top: 74px;
+    padding-bottom: 40px;
+  }
+
+  .order-rugs {
+    .btn {
+      min-width: 185px;
+    }
+  }
+
+  .configurator__left {
+    max-width: 250px;
+  }
+
+  .configurator__content {
+    max-width: 310px;
+  }
+
+  .auto-picture__link a {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .accessories .input-list {
+    width: 120px;
+  }
+
+  .rugs-slider__leftSide {
+    line-height: 20px;
+  }
+  .rugs-slider__righSide {
+    max-width: 215px;
+  }
+
+  .rugs-slider__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .rugs-slider__desc {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .rugs-slider {
+    .swiper-slide {
+      padding: 15px;
+    }
+  }
+
+  .rugs-slider__price {
+    margin-top: 10px;
+  }
+
+  .rugs-slider__price .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+
+  .rugs-slider__price .price {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .rugs-slider {
+    .swiper-button-prev {
+      margin-top: -40px;
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        left: -7px;
+      }
+    }
+    .swiper-button-next {
+      right: 15px;
+      margin-top: -40px;
+      width: 40px;
+      height: 40px;
+
+      &::before {
+        left: 7px;
+      }
+    }
+  }
+
+  .rugs-slider .swiper-button-next::before,
+  .rugs-slider .swiper-button-prev::before {
+    font-size: 8px;
+  }
+
+  .rugs-slider__righSide {
+    right: 45px;
+  }
+
+  .rugs-slider__content {
+    margin-top: 20px;
+  }
+
+  .rugs-slider .btn {
+    margin-top: 20px;
+    min-width: 215px;
+  }
+
+  .rugs-slider .info {
+    right: 0;
+  }
+
+  .catalog-list .catalog-item {
+    width: calc(100% / 3 - 24px);
+  }
+
+  .review-item__name {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .review-item__name + * {
+    margin-top: 5px;
+  }
+
+  .reviews-other {
+    margin-top: 25px;
+    gap: 10px;
+  }
+
+  .reviews-other__item {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .reviews-other__item {
+    width: calc(20% - 8px);
+  }
+
+  .guarantes__name {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .guarantes {
+    .caption + * {
+      margin-top: 15px;
+    }
+
+    strong {
+      margin-top: 15px;
+    }
+  }
+
+  .footer__bottom {
+    .col:nth-child(2) {
+      width: 100%;
+      order: 1;
+      flex: auto;
+      margin-top: 15px;
+    }
+
+    .logoWrapper {
+      margin-bottom: 15px;
+    }
+  }
+
+  .contacts {
+    justify-content: flex-start;
+    font-size: 16px;
+    line-height: 20px;
+    gap: 10px 5px;
+  }
+
+  #modalInfo .modal__content {
+    padding: 38px 10px 30px;
+
+    .caption {
+      font-size: 25px;
+      line-height: 35px;
+    }
+  }
+
+  #modalWrite {
+    .controls {
+      flex-direction: column;
+
+      .btn {
+        order: 2;
+      }
+
+      .checkBlock {
+        margin: 0;
+        order: 1;
+      }
+    }
+  }
 }

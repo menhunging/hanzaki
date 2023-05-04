@@ -1,0 +1,55 @@
+@media (max-width: 1619px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .header__col {
+    width: calc(50% - 75px);
+    padding: 15px 0;
+  }
+
+  .header__phone {
+    font-size: 18px;
+  }
+
+  .btn-phone,
+  .btn-whatsapp {
+    min-width: 200px;
+  }
+
+  .menu {
+    ul {
+      width: calc(50% - 75px);
+    }
+  }
+
+  .order-rugs {
+    padding: 40px 60px 40px 35px;
+  }
+
+  .configurator__left {
+    max-width: 425px;
+  }
+
+  .rugs-advantages__picture {
+    margin-left: -350px;
+    width: 700px;
+    margin-top: -350px;
+    top: 50%;
+  }
+
+  .rugs-advantages .list-title-invis .title-invis {
+    font-size: 174px;
+  }
+
+  .work-example {
+    .swiper {
+      left: 0;
+      width: 100%;
+    }
+
+    .swiper-controls {
+      right: 15px;
+    }
+  }
+}
