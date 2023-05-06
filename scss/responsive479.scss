@@ -415,6 +415,26 @@
     font-size: 12px;
     line-height: 14px;
   }
+
+  .price-block__line {
+    justify-content: center;
+  }
+
+  .configurator__controls__right {
+    width: 100%;
+  }
+
+  .reviews__add {
+    margin-top: 10px;
+
+    .text {
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 @media (max-width: 359px) {
