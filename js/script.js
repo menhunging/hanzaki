@@ -287,7 +287,7 @@ function mergingMenu() {
   let newMenu = $("<ul/>").append($(".menu li").clone());
   menu.find("ul").remove();
   menu.append(newMenu);
-  initMenuAnchor()
+  initMenuAnchor();
 }
 
 function scrollImgConfig() {
