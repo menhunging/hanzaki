@@ -21,7 +21,6 @@ $(document).ready(function () {
     $(".complect-tabs").tabslet({
       mouseevent: "click",
       animation: true,
-      active: 2,
     });
 
     $(".complect-tabs").on("_before", function (e) {
@@ -251,6 +250,32 @@ $(document).ready(function () {
       }
     });
   }
+
+  if ($(window).width() < 1200) {
+    mergingMenu();
+  }
+
+  if ($(".configurator").length) {
+    if ($(window).width() < 640) {
+      scrollImgConfig();
+    }
+  }
+
+  if ($("[data-aos]").length) {
+    $("[data-aos]").each((i, el) => {
+      AOS.init({
+        offset: 300,
+        // duration: 1200,
+        once: false,
+      });
+    });
+  }
+});
+
+$(window).resize(function () {
+  if ($(window).width() < 1200 && $(".menu ul").length >= 2) {
+    mergingMenu();
+  }
 });
 
 function setScrollMargin(hashLoad) {
@@ -282,4 +307,28 @@ function setScrollMargin(hashLoad) {
   }
 
   return $(hashLoad).offset().top - maring;
+}
+
+function mergingMenu() {
+  let menu = $(".menu");
+  let newMenu = $("<ul/>").append($(".menu li").clone());
+  menu.find("ul").remove();
+  menu.append(newMenu);
+}
+
+function scrollImgConfig() {
+  let configImg = $(".configurator__left");
+  let positionConfig = $(".configurator").position().top;
+  let heightConfig = $(".configurator").outerHeight();
+
+  $(window).scroll(function () {
+    if (
+      $(window).scrollTop() >= positionConfig &&
+      $(window).scrollTop() < heightConfig + 500
+    ) {
+      configImg.addClass("visible");
+    } else {
+      configImg.removeClass("visible");
+    }
+  });
 }

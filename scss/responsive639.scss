@@ -32,14 +32,35 @@
   }
 
   .configurator__left {
-    position: relative;
+    position: fixed;
     left: 0;
-    top: 0;
-    margin: 0 auto;
+    top: -1000px;
     width: 100%;
     max-width: 100%;
     padding: 0;
-    order: 2;
+    display: flex;
+    align-items: center;
+    z-index: 7;
+    background-color: $colorWhite;
+    padding: 5px 15px;
+    gap: 15px;
+    border-bottom: solid 1px $colorBorder;
+    @include transition(top 0.3s);
+
+    &.visible {
+      top: 74px;
+    }
+
+    img {
+      max-width: 120px;
+    }
+  }
+
+  .configurator__left__text {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0;
   }
 
   .configurator__content {
@@ -138,7 +159,7 @@
   }
 
   .rugs-advantages {
-    padding: 90px 0 30px;
+    padding: 89px 0 0px;
   }
 
   .work-example {

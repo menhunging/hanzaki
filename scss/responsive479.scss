@@ -22,8 +22,26 @@
   }
 
   .header__inner {
+    .header__content {
+      max-width: 340px;
+    }
+
     .menu {
       gap: 20px;
+      padding: 20px 0;
+
+      ul {
+        gap: 15px 0;
+        justify-content: space-between;
+
+        li {
+          width: calc(50% - 15px);
+
+          &:nth-child(2n) {
+            text-align: right;
+          }
+        }
+      }
     }
   }
 
@@ -81,12 +99,19 @@
     padding: 30px 0;
   }
 
+  .configurator__item {
+    &.aos-animate {
+      .configurator__number {
+        left: -27px;
+      }
+    }
+  }
+
   .configurator__number {
     font-size: 16px;
     line-height: 20px;
     width: 53px;
     height: 53px;
-    left: -27px;
     top: 56px;
     padding-left: 6px;
   }
@@ -177,7 +202,7 @@
   }
 
   .price-block .btn {
-    min-width: 280px;
+    min-width: 222px;
   }
 
   .rugs-info {
@@ -258,8 +283,20 @@
   }
 
   .guarantes__item {
-    width: 100%;
-    min-height: 100px;
+    padding: 5px;
+    min-height: 110px;
+  }
+
+  .guarantes__name {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .mobile-dialog-guarant {
+    .guarantes__name {
+      font-size: 16px;
+      line-height: 20px;
+    }
   }
 
   .delivery {
@@ -368,6 +405,15 @@
 
   .modal .caption {
     line-height: 35px;
+  }
+
+  .configurator__left.visible {
+    top: 59px;
+  }
+
+  .configurator__left__text {
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 

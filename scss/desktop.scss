@@ -113,6 +113,7 @@
     position: sticky;
     left: 0;
     top: 50px;
+    padding-top: 90px;
 
     img {
       width: 100%;
@@ -155,9 +156,10 @@
       margin-top: 20px;
     }
 
-    &_current {
+    &.aos-animate {
       .configurator__number {
         background-color: $colorSite1;
+        left: -40px;
       }
     }
   }
@@ -182,10 +184,12 @@
     align-items: flex-end;
     padding-bottom: 13px;
     position: absolute;
-    left: -40px;
+
     top: 56px;
     padding-left: 16px;
     z-index: -1;
+    left: 0;
+    @include transition(all 0.3s);
   }
 
   &__row {
@@ -350,6 +354,10 @@
 
   .btn {
     min-width: 276px;
+  }
+
+  .mobile {
+    display: none;
   }
 }
 
@@ -545,14 +553,10 @@
   &__link {
     text-align: center;
     margin-top: 11px;
-
-    a {
-      font-weight: 400;
-      font-size: 20px;
-      line-height: 35px;
-      color: $colorSite1;
-      @include text-decoration-hover($colorSite1);
-    }
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+    color: $colorSite1;
   }
 }
 
@@ -1361,6 +1365,14 @@
     margin: 55px 0 0;
   }
 
+  .swiper-slide {
+    @include transition(opacity 0.3s);
+  }
+
+  .swiper-slide-prev {
+    opacity: 0;
+  }
+
   %swiper-button {
     background-color: $colorSite1;
     border: solid 2px $colorSite1;
@@ -1495,7 +1507,7 @@
     padding: 15px 10px;
     overflow: hidden;
     @include border-radius(10px);
-    @include transition(box-shadow 0.3s);
+    @include transition(all 0.3s);
     @include invisLink;
 
     [class*="icon-"] {
@@ -1505,14 +1517,18 @@
       right: 0;
       top: 0;
       opacity: 0.1;
+      @include transition(color 0.3s);
     }
 
-    &_yandex {
-      background-color: $colorSite1;
-      border-color: $colorSite1;
+    svg {
+      fill: #757983;
+      color: #757983;
+      @include transition(all 0.3s);
 
-      [class*="icon-"] {
-        color: $colorWhite;
+      path {
+        @include transition(all 0.3s);
+        fill: #757983;
+        color: #757983;
       }
     }
 
@@ -1522,7 +1538,22 @@
     }
 
     &:hover {
-      @include box-shadow(0px 0px 10px rgba(0, 0, 0, 0.11));
+      background-color: $colorSite1;
+      border-color: $colorSite1;
+
+      [class*="icon-"] {
+        color: $colorWhite;
+      }
+
+      svg {
+        fill: $colorWhite;
+        color: $colorWhite;
+
+        path {
+          fill: $colorWhite;
+          color: $colorWhite;
+        }
+      }
     }
   }
 
@@ -1569,6 +1600,7 @@
   }
 
   &__item {
+    position: relative;
     width: calc(100% / 3 - 20px);
     @include border-radius(10px);
     min-height: 427px;
@@ -1578,6 +1610,33 @@
     display: flex;
     align-items: flex-end;
     padding: 5px 56px 26px;
+    z-index: 3;
+
+    @include before {
+      width: 100%;
+      height: 100%;
+      background-color: $colorBlack;
+      left: 0;
+      top: 0;
+      @include border-radius(10px);
+      z-index: -1;
+      opacity: 0;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0.5;
+      }
+
+      .guarantes__name {
+        opacity: 0;
+      }
+
+      .guarantes__desc {
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
   }
 
   &__name {
@@ -1585,6 +1644,28 @@
     font-size: 18px;
     line-height: 23px;
     color: $colorWhite;
+    opacity: 1;
+    @include transition(opacity 0.3s);
+  }
+
+  &__desc {
+    @include transition(opacity 0.3s);
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    color: $colorWhite;
+    padding: 15px;
   }
 
   strong {
@@ -1594,6 +1675,36 @@
     color: $colorSite1;
     display: block;
     margin-top: 35px;
+  }
+}
+
+.mobile-dialog-guarant {
+  display: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  max-width: 600px;
+  @include border-radius(10px);
+  background-color: transparent;
+
+  &.fancybox__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 15px;
+    color: $colorWhite;
+    min-height: 250px;
+    text-shadow: 0px 0px 0p $colorBlack;
+
+    .guarantes__name {
+      & + * {
+        margin-top: 10px;
+      }
+    }
   }
 }
 
@@ -1806,14 +1917,42 @@
     li {
     }
 
+    svg {
+      @include transition(all 0.3s);
+      @include border-radius(50%);
+
+      circle,
+      path {
+        @include transition(all 0.3s);
+      }
+    }
+
     a:hover {
-      img {
-        @include filter(contrast(1.5));
+      svg {
+        fill: $colorSite1;
+
+        circle {
+          fill: $colorSite1;
+
+          & + {
+            path {
+              fill: $colorWhite;
+
+              & + {
+                path {
+                  fill: $colorWhite;
+                }
+              }
+            }
+          }
+        }
+        path {
+          fill: $colorSite1;
+        }
       }
     }
 
     img {
-      @include transition(filter 0.3s);
     }
   }
 

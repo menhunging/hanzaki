@@ -64,6 +64,7 @@
 
   .configurator__left {
     max-width: 350px;
+    padding-top: 75px;
   }
 
   .configurator__content {
@@ -127,7 +128,7 @@
   }
 
   .price-block .btn {
-    min-width: 250px;
+    min-width: 237px;
   }
 
   .configurator__controls__title {
@@ -217,15 +218,13 @@
     line-height: 18px;
   }
 
-  .rugs-advantages .list-title-invis .title-invis:nth-child(2) {
-    top: 394px;
-    font-size: 100px;
-    line-height: 100px;
+  .rugs-advantages {
+    padding: 100px 0 0;
   }
 
+  .rugs-advantages .list-title-invis .title-invis:nth-child(2),
   .rugs-advantages .list-title-invis .title-invis:nth-child(3) {
-    bottom: -1px;
-    top: auto;
+    display: none;
   }
 
   .rugs-advantages .list-title-invis .title-invis {

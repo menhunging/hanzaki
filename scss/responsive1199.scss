@@ -15,7 +15,7 @@
     gap: 10px;
 
     ul {
-      width: calc(50% - 10px);
+      width: 100%;
     }
   }
 
@@ -38,6 +38,8 @@
       height: auto;
       align-items: flex-start;
       justify-content: center;
+      max-width: 640px;
+      margin: 0 auto;
     }
 
     .menu {
@@ -210,15 +212,35 @@
 
   .configurator__controls__right {
     order: 1;
+
+    .mobile {
+      display: block;
+      padding: 0 !important;
+      width: 58px;
+      white-space: nowrap;
+      overflow: hidden;
+      min-width: inherit;
+      margin: 0;
+
+      [class*="icon-"] {
+        left: 0 !important;
+        font-size: 25px;
+      }
+    }
   }
 
   .configurator__controls__left {
     margin-top: 25px;
     order: 2;
+    display: none;
   }
 
   .price-block__line {
     justify-content: flex-start;
+
+    &:last-child {
+      gap: 15px;
+    }
   }
 
   .accessories .input-list {
@@ -360,8 +382,9 @@
     }
   }
 
-  .reviews-other__item img {
+  .reviews-other__item svg {
     max-width: 100%;
+    display: block;
   }
 
   .reviews .swiper {
@@ -397,6 +420,7 @@
   .guarantes__name {
     font-size: 16px;
     line-height: 20px;
+    opacity: 1 !important;
   }
 
   .guarantes__list {
@@ -406,6 +430,16 @@
   .guarantes__item {
     width: calc(100% / 3 - 10px);
     padding: 15px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .guarantes__desc {
+    font-size: 12px;
+    line-height: 18px;
+    display: none;
   }
 
   .delivery .car {
