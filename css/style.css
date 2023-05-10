@@ -1735,7 +1735,7 @@ input {
 }
 .accessories .input-list {
   grid-column: 2/3;
-  width: 170px;
+  width: 190px;
   margin-top: 0;
 }
 .accessories .input-list .input-item {
@@ -1749,8 +1749,8 @@ input {
 }
 .accessories .input-list .selectric .label {
   height: 34px;
-  font-size: 12px;
-  line-height: 34px;
+  font-size: 14px;
+  line-height: 29px;
   padding-left: 10px;
   padding-right: 10px;
 }
@@ -1777,8 +1777,8 @@ input {
 .counter {
   color: rgb(0, 0, 0);
   font-weight: 500;
-  font-size: 10px;
-  line-height: 12px;
+  font-size: 16px;
+  line-height: 22px;
   text-transform: uppercase;
   border: 1px solid #c6ccdc;
   -webkit-border-radius: 2px;
@@ -1787,9 +1787,9 @@ input {
   border-radius: 2px;
   display: flex;
   flex-wrap: wrap;
-  width: 92px;
+  width: 112px;
   text-align: center;
-  height: 27px;
+  height: 37px;
   grid-column: 2/3;
 }
 .counter .counter__plus, .counter .counter__text, .counter .counter__minus {
@@ -1807,7 +1807,7 @@ input {
   border-radius: 2px;
 }
 .counter__minus {
-  width: 25px;
+  width: 35px;
   cursor: pointer;
 }
 .counter__minus:hover {
@@ -1847,7 +1847,7 @@ input {
   margin-top: -7px;
 }
 .counter__plus {
-  width: 25px;
+  width: 35px;
   cursor: pointer;
 }
 .counter__plus:hover {
@@ -3664,6 +3664,7 @@ input {
   }
   .accessories .input-list {
     margin-top: 0;
+    width: 150px;
   }
   .configurator__col_complects {
     max-width: 100%;
@@ -4820,6 +4821,17 @@ input {
   .reviews__add .btn {
     margin-left: auto;
     margin-right: auto;
+  }
+  .counter {
+    width: 90px;
+    height: 27px;
+    font-size: 12px;
+  }
+  .counter__minus {
+    width: 25px;
+  }
+  .counter__plus {
+    width: 25px;
   }
 }
 @media (max-width: 359px) {

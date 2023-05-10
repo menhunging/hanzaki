@@ -435,6 +435,20 @@
       margin-right: auto;
     }
   }
+
+  .counter {
+    width: 90px;
+    height: 27px;
+    font-size: 12px;
+  }
+
+  .counter__minus {
+    width: 25px;
+  }
+
+  .counter__plus {
+    width: 25px;
+  }
 }
 
 @media (max-width: 359px) {

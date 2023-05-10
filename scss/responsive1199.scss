@@ -243,10 +243,12 @@
     }
   }
 
-  .accessories .input-list {
-    margin-top: 0;
+  .accessories {
+    .input-list {
+      margin-top: 0;
+      width: 150px;
+    }
   }
-
   .configurator__col_complects {
     max-width: 100%;
     margin-top: 15px;
