@@ -208,7 +208,8 @@
     padding-right: 0 !important;
     padding-left: 77px !important;
 
-    [class*="icon-"] {
+    [class*="icon-"],
+    .icon {
       left: 0 !important;
     }
   }

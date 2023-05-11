@@ -2203,7 +2203,10 @@ input {
 .rugs-advantages__item:nth-last-child(3) .rugs-advantages__head, .rugs-advantages__item:nth-last-child(2) .rugs-advantages__head, .rugs-advantages__item:nth-last-child(1) .rugs-advantages__head {
   padding-left: 0;
 }
-.rugs-advantages__item:nth-last-child(3) .rugs-advantages__head [class*=icon-], .rugs-advantages__item:nth-last-child(2) .rugs-advantages__head [class*=icon-], .rugs-advantages__item:nth-last-child(1) .rugs-advantages__head [class*=icon-] {
+.rugs-advantages__item:nth-last-child(3) .rugs-advantages__head [class*=icon-],
+.rugs-advantages__item:nth-last-child(3) .rugs-advantages__head .icon, .rugs-advantages__item:nth-last-child(2) .rugs-advantages__head [class*=icon-],
+.rugs-advantages__item:nth-last-child(2) .rugs-advantages__head .icon, .rugs-advantages__item:nth-last-child(1) .rugs-advantages__head [class*=icon-],
+.rugs-advantages__item:nth-last-child(1) .rugs-advantages__head .icon {
   left: auto;
   right: 0;
 }
@@ -2221,12 +2224,14 @@ input {
 .rugs-advantages__head + * {
   margin-top: 11px;
 }
-.rugs-advantages__head [class*=icon-] {
+.rugs-advantages__head [class*=icon-],
+.rugs-advantages__head .icon {
   color: rgb(21, 178, 181);
   font-size: 57px;
   position: absolute;
   left: 0;
   top: 0;
+  object-fit: cover;
 }
 .rugs-advantages__head__num {
   font-weight: 500;
@@ -4010,7 +4015,8 @@ input {
     padding-right: 0 !important;
     padding-left: 77px !important;
   }
-  .rugs-advantages__head [class*=icon-] {
+  .rugs-advantages__head [class*=icon-],
+  .rugs-advantages__head .icon {
     left: 0 !important;
   }
   .rugs-advantages__head__name {
@@ -4404,8 +4410,11 @@ input {
   .rugs-advantages__item {
     width: calc(50% - 15px);
   }
-  .rugs-advantages__head [class*=icon-] {
+  .rugs-advantages__head [class*=icon-],
+  .rugs-advantages__head .icon {
     font-size: 45px;
+    width: 45px;
+    top: 5px;
   }
   .rugs-advantages__item:nth-child(5) [class*=icon-] {
     font-size: 30px;

@@ -1075,7 +1075,8 @@
       .rugs-advantages__head {
         padding-left: 0;
 
-        [class*="icon-"] {
+        [class*="icon-"],
+        .icon {
           left: auto;
           right: 0;
         }
@@ -1098,12 +1099,14 @@
       margin-top: 11px;
     }
 
-    [class*="icon-"] {
+    [class*="icon-"],
+    .icon {
       color: $colorSite1;
       font-size: 57px;
       position: absolute;
       left: 0;
       top: 0;
+      object-fit: cover;
     }
 
     &__num {

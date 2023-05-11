@@ -121,8 +121,11 @@
   }
 
   .rugs-advantages__head {
-    [class*="icon-"] {
+    [class*="icon-"],
+    .icon {
       font-size: 45px;
+      width: 45px;
+      top: 5px;
     }
   }
 
