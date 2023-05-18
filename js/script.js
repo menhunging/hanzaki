@@ -243,6 +243,20 @@ $(document).ready(function () {
       });
     });
   }
+
+  if ($(".cellule-kant").length) {
+    $(".cellule-kant label").click(function () {
+      let url = $(this).attr("data-img");
+      url !== undefined ? $(".kant").attr("src", url) : null;
+    });
+  }
+
+  if ($(".cellule-kovrik").length) {
+    $(".cellule-kovrik label").click(function () {
+      let url = $(this).attr("data-img");
+      url !== undefined ? $(".kovrik").attr("src", url) : null;
+    });
+  }
 });
 
 $(window).resize(function () {
