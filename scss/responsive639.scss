@@ -250,7 +250,22 @@
     }
   }
 
-  .configurator__left .picture {
-    height: 74px;
+  .configurator__left {
+    .picture {
+      height: 74px;
+
+      .accessorie-1 {
+        width: 40px;
+        left: 10px;
+        bottom: 15px;
+      }
+
+      .accessorie-2 {
+        width: 30px;
+        right: auto;
+        top: 34px;
+        left: 65px;
+      }
+    }
   }
 }

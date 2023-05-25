@@ -132,18 +132,44 @@
       }
     }
 
-    .picture{
+    .picture {
       position: relative;
       width: 100%;
       height: 300px;
 
-      img{
+      img {
         position: absolute;
-        left:0;
-        top:0;
+        left: 0;
+        top: 0;
         width: 100%;
         height: 100%;
         object-fit: contain;
+      }
+
+      .accessorie-1 {
+        width: auto;
+        height: auto;
+        bottom: 60px;
+        left: 50px;
+        top: auto;
+        display: none;
+
+        &.visible {
+          display: block;
+        }
+      }
+
+      .accessorie-2 {
+        left: auto;
+        width: auto;
+        height: auto;
+        right: 120px;
+        top: 55px;
+        display: none;
+
+        &.visible {
+          display: block;
+        }
       }
     }
   }
@@ -670,6 +696,10 @@
     grid-column: 3/3;
     grid-row: 1/3;
     padding: 0;
+
+    &.active{
+      
+    }
 
     &::before {
       display: none;

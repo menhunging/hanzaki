@@ -336,4 +336,18 @@
   .configurator__left .picture {
     height: 215px;
   }
+
+  .configurator__left {
+    .picture {
+      .accessorie-1 {
+        width: 80px;
+      }
+
+      .accessorie-2 {
+        width: 70px;
+        right: 60px;
+        top: 100px;
+      }
+    }
+  }
 }

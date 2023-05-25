@@ -1,13 +1,49 @@
 $(document).ready(function () {
   if ($(".testModal").length) {
-    $('.testModal').click(function(){
+    $(".testModal").click(function () {
       MicroModal.show("modalCall");
-    })
+    });
 
-    $('.testModal2').click(function(){
+    $(".testModal2").click(function () {
+      // это условный ajax запрос отработал
       MicroModal.close("modalCall");
-      MicroModal.show("modalCheckDelibery");
-    })
+      MicroModal.show("modalCheckDelibery"); // модалка спасибо
+    });
+  }
+
+  if ($(".accessories .btn").length) {
+    $(".accessories .btn").on("click", function (e) {
+      e.preventDefault();
+      let button = $(this);
+      if (!button.hasClass("active")) {
+        button.addClass("active").text("-");
+        addAccessorie(button);
+      } else {
+        button.removeClass("active").text("+");
+        deleteAccessories(button);
+      }
+    });
+
+    function addAccessorie(button) {
+      let accessorie = button.attr("data-accessorie");
+      let url = button.parents(".accessories__col").find("img").attr("src");
+
+      $("img").map(function () {
+        if ($(this).hasClass(accessorie)) {
+          $(this).attr("src", url).addClass("visible");
+        }
+      });
+    }
+
+    function deleteAccessories(button) {
+      let accessorie = button.attr("data-accessorie");
+
+      $("img").map(function () {
+        if ($(this).hasClass(accessorie)) {
+          $(this).attr("src", "").removeClass("visible");
+        }
+      });
+    }
   }
 
   if ($(".header").length) {
