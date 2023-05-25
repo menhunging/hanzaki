@@ -3207,6 +3207,22 @@ input {
   background-color: rgb(255, 255, 255);
 }
 
+.text-simple {
+  padding: 30px 0;
+  font-weight: 300;
+  font-size: 25px;
+  line-height: 45px;
+  display: block;
+}
+.text-simple h2 {
+  display: block;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 55px;
+  color: #23262e;
+  margin: 10px 0;
+}
+
 @media (max-width: 1619px) {
   .container {
     max-width: 1400px;
@@ -3879,6 +3895,10 @@ input {
     flex: 1;
     padding: 0 15px;
   }
+  .text-simple h2 {
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 @media (max-width: 991px) {
   .container {
@@ -4366,6 +4386,15 @@ input {
     width: 50px;
     right: 50px;
     top: 80px;
+  }
+  .text-simple {
+    padding: 15px 0;
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .text-simple h2 {
+    font-size: 25px;
+    line-height: 30px;
   }
 }
 @media (max-width: 639px) {
