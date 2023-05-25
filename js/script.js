@@ -1,4 +1,15 @@
 $(document).ready(function () {
+  if ($(".testModal").length) {
+    $('.testModal').click(function(){
+      MicroModal.show("modalCall");
+    })
+
+    $('.testModal2').click(function(){
+      MicroModal.close("modalCall");
+      MicroModal.show("modalCheckDelibery");
+    })
+  }
+
   if ($(".header").length) {
     let header = $(".header");
 
