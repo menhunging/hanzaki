@@ -3209,6 +3209,7 @@ input {
 
 .text-simple {
   padding: 30px 0;
+  padding-top: 142px;
   font-weight: 300;
   font-size: 25px;
   line-height: 45px;
@@ -3522,6 +3523,9 @@ input {
     font-size: 14px;
     line-height: 20px;
     padding: 5px;
+  }
+  .text-simple {
+    padding-top: 90px;
   }
 }
 @media (max-width: 1199px) {
@@ -3895,9 +3899,12 @@ input {
     flex: 1;
     padding: 0 15px;
   }
+  .text-simple {
+    padding-top: 120px;
+  }
   .text-simple h2 {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 40px;
+    line-height: 50px;
   }
 }
 @media (max-width: 991px) {
@@ -4175,6 +4182,9 @@ input {
     right: 60px;
     top: 100px;
   }
+  .text-simple {
+    padding-top: 100px;
+  }
 }
 @media (max-width: 767px) {
   .container {
@@ -4388,7 +4398,7 @@ input {
     top: 80px;
   }
   .text-simple {
-    padding: 15px 0;
+    padding-top: 80px;
     font-size: 18px;
     line-height: 30px;
   }
@@ -4943,6 +4953,9 @@ input {
   }
   .counter__plus {
     width: 25px;
+  }
+  .text-simple {
+    padding-top: 60px;
   }
 }
 @media (max-width: 359px) {

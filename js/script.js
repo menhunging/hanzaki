@@ -57,9 +57,11 @@ $(document).ready(function () {
 
     function addClassScroll() {
       if ($(window).scrollTop() > 1) {
-        header.addClass("header_scroll");
+        !$(".siteWrapper").hasClass("innerPage") &&
+          header.addClass("header_scroll");
       } else {
-        header.removeClass("header_scroll");
+        !$(".siteWrapper").hasClass("innerPage") &&
+          header.removeClass("header_scroll");
       }
     }
   }
