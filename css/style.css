@@ -2305,7 +2305,7 @@ input {
 .work-example__item {
   display: grid;
   grid-template-columns: calc(60% + 27px) 1fr;
-  grid-template-rows: 395px 395px;
+  grid-template-rows: 280px 280px;
   gap: 16px 23px;
 }
 .work-example__item img {
@@ -3463,7 +3463,7 @@ input {
     top: 30px;
   }
   .work-example__item {
-    grid-template-rows: 265px 265px;
+    grid-template-rows: 185px 185px;
     gap: 15px;
   }
   .work-example__item [class*=icon-] {
@@ -3779,7 +3779,7 @@ input {
     margin-top: 20px;
   }
   .work-example__item {
-    grid-template-rows: 205px 205px;
+    grid-template-rows: 144px 144px;
   }
   .work-example {
     padding: 50px 0;
