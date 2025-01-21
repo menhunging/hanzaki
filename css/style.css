@@ -2861,9 +2861,9 @@ input {
 
 .delivery {
   position: relative;
-  padding: 114px 0 192px;
+  padding: 114px 0 100px;
   background-image: url(../img/word.png);
-  background-position: calc(50% + 95px) 143px;
+  background-position: calc(50% + 95px) 63px;
   background-repeat: no-repeat;
   overflow: hidden;
 }
