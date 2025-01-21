@@ -3224,6 +3224,23 @@ input {
   margin: 10px 0;
 }
 
+.faq-block {
+  padding: 50px 0;
+}
+.faq-block__list {
+  margin-top: 50px;
+}
+.faq-block__list span {
+  max-width: 80%;
+}
+.faq-block .active .faq__quest [class*=icon-] {
+  background-color: rgb(21, 178, 181);
+  color: rgb(255, 255, 255);
+}
+.faq-block .active .faq__quest [class*=icon-]::before {
+  transform: scale(1, -1);
+}
+
 @media (max-width: 1619px) {
   .container {
     max-width: 1400px;

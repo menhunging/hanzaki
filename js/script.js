@@ -181,17 +181,18 @@ $(document).ready(function () {
   }
 
   if ($(".faq").length) {
-    let quest = $(".faq__quest");
+    let quest = $(".faq .faq__quest");
 
     quest.click(function () {
       if ($(this).parents(".faq__item").hasClass("active")) {
-        $(".faq__item").stop().removeClass("active");
-        $(".faq__answer").stop().slideUp();
+        let faqItem = $(this).parents(".faq__item");
+        faqItem.stop().removeClass("active");
+        faqItem.find(".faq__answer").stop().slideUp();
         return false;
       }
 
-      $(".faq__item").stop().removeClass("active");
-      $(".faq__answer").stop().slideUp();
+      $(".faq .faq__item").stop().removeClass("active");
+      $(".faq .faq__answer").stop().slideUp();
 
       $(this)
         .parents(".faq__item")
@@ -200,6 +201,20 @@ $(document).ready(function () {
         .find(".faq__answer")
         .stop()
         .slideDown();
+    });
+  }
+
+  if ($(".faq-block").length) {
+    let quest = $(".faq-block .faq__quest");
+
+    quest.on("click", function () {
+      let faqItem = $(this).parents(".faq__item");
+
+      if (faqItem.hasClass("active")) {
+        faqItem.removeClass("active").find(".faq__answer").stop().slideUp();
+      } else {
+        faqItem.addClass("active").find(".faq__answer").stop().slideDown();
+      }
     });
   }
 
